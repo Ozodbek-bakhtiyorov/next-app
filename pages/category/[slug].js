@@ -1,8 +1,8 @@
-import React from "react";
+
 import { getCategories, getCategoryPosts } from "../../services";
-import { Categories , Loader} from "../components";
-import PostCard from "./../components/PostCard";
+import { Categories , Loader,PostCard} from "../components";
 import {useRouter} from "next/router";
+
 export default function Category({ posts }) {
   const router = useRouter();
   if(router.isFallback){
