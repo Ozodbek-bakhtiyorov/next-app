@@ -8,12 +8,13 @@ import {
   CommentsForm,
   Loader
 } from "../components";
+
 import {useRouter} from "next/router";
 
 import { getPostDetails, getPosts } from "./../../services/index";
-const router = useRouter();
 
 export default function PostDetails({post}) {
+  const router = useRouter();
   if(router.isFallback){
     return <Loader/>
   }
