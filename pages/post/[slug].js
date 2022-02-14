@@ -11,13 +11,12 @@ import {
 import {useRouter} from "next/router";
 
 import { getPostDetails, getPosts } from "./../../services/index";
-
 const router = useRouter();
-if(router.isFallback){
-  return <Loader/>
-}
+
 export default function PostDetails({post}) {
-  console.log(post);
+  if(router.isFallback){
+    return <Loader/>
+  }
   return (
     <div className="container mx-auto px-10 mb-8">
       <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">

@@ -4,9 +4,7 @@ import { Categories , Loader} from "../components";
 import PostCard from "./../components/PostCard";
 import {useRouter} from "next/router";
 export default function Category({ posts }) {
-
   const router = useRouter();
-
   if(router.isFallback){
     return <Loader/>
   }
